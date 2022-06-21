@@ -1,0 +1,155 @@
+/* CSS SETUP */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Very-dark-blue: hsl(217, 54%, 11%);
+    --Dark-blue: hsl(216, 50%, 16%);
+    --Blue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue);
+    line-height: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+
+/* NFT COMPONENT */
+.card {
+    justify-self: center;
+    height: 550px;
+    width: 330px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--Soft-blue);
+    background-color: var(--Dark-blue);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.librium {
+    position: relative;
+}
+
+.librium .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 98%;
+    border-radius: 10px;
+    background-color: var(--Cyan);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.librium .overlay img {
+    margin: auto;
+    width: 20%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--White);
+    cursor: pointer;
+}
+
+.info.grid {
+    border-bottom: 1px solid var(--Blue);
+}
+
+.info .currency.grid-2 {
+    grid-template-columns: 15% 85%;
+    color: var(--Cyan);
+    align-self: center;
+}
+
+.info .currency img {
+    width: 12px;
+}
+
+.info .time.grid-2 {
+    grid-template-columns: 30% 60%;
+    justify-content: end;
+    color: var(--Soft-blue);
+    text-align: right;
+}
+
+.info .time img {
+    width: 19px;
+    justify-self: end;
+}
+
+.profile.grid {
+    grid-template-columns: 20% 70%;
+    justify-content: start;
+    font-size: 16px;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: solid 2px var(--White);
+    width: 38px;
+}
+
+.profile span {
+    color: var(--White);
+    cursor: pointer;
+}
+
+
+/* ACTIVE */
+.card .librium .overlay:active {
+    opacity: 0.75;
+}
+
+h2:active,
+.profile span:active {
+    color: var(--Cyan);
+}
+
+
+/* FOOTER */
+.attribution {
+    color: var(--White);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
